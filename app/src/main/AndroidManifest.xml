@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fu.demo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.BroadcastActivity"></activity>
-
+        <activity
+            android:name=".ui.OkhttpActivity"
+            android:label="OKHTTP" />
         <!-- 静态注册广播 -->
         <receiver
             android:name=".receiver.MyReceiver"
@@ -21,8 +24,25 @@
             <intent-filter>
                 <action android:name="com.fu.test" />
             </intent-filter>
-        </receiver>
-
+        </receiver> <!-- <receiver -->
+        <!-- android:name=".receiver.Order2Receiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter android:priority="2"> -->
+        <!-- <action android:name="com.fu.broadcast.order" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <receiver -->
+        <!-- android:name=".receiver.Order1Receiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter android:priority="1"> -->
+        <!-- <action android:name="com.fu.broadcast.order" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity
+            android:name=".ui.BroadcastActivity"
+            android:label="广播相关" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

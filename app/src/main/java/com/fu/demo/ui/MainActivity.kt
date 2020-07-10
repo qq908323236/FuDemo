@@ -16,4 +16,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, BroadcastActivity::class.java)
         startActivity(intent)
     }
+
+    fun startOkhttp(view: View) {
+        val intent = Intent(this, OkhttpActivity::class.java)
+        startActivity(intent)
+    }
 }

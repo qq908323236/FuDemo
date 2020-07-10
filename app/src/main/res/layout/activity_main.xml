@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.MainActivity">
 
     <Button
@@ -11,5 +12,11 @@
         android:layout_height="wrap_content"
         android:text="广播相关"
         android:onClick="broadcastReceiver"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OKHTTP相关"
+        android:onClick="startOkhttp"/>
 
 </LinearLayout>
